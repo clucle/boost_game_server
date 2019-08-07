@@ -17,6 +17,7 @@
 #include <utility>
 #include <boost/asio.hpp>
 #include "chat_message.hpp"
+#include "DispatcherQueue.h"
 
 using boost::asio::ip::tcp;
 
