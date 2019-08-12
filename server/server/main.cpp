@@ -18,6 +18,7 @@
 #include <boost/asio.hpp>
 #include "chat_message.hpp"
 #include "DispatcherQueue.h"
+#include "ServerSocket.hpp"
 
 using boost::asio::ip::tcp;
 
@@ -203,10 +204,12 @@ int main(int argc, char* argv[])
 	try
 	{
 		boost::asio::io_context io_context;
-		std::list<chat_server> servers;
-		uint16_t port = 9404;
-		tcp::endpoint endpoint(tcp::v4(), port);
-		servers.emplace_back(io_context, endpoint);
+		//std::list<chat_server> servers;
+		//uint16_t port = 9404;
+		//tcp::endpoint endpoint(tcp::v4(), port);
+		//servers.emplace_back(io_context, endpoint);
+		ServerSocket serverSocket(io_context);
+		serverSocket.open(9404);
 		io_context.run();
 	}
 	catch (std::exception& e)

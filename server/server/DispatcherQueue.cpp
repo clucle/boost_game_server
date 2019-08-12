@@ -1,6 +1,6 @@
 
-#include "DispatcherQueue.h"
-#include "DispatcherQueue.h"
+#include "DispatcherQueue.hpp"
+#include "DispatcherQueue.hpp"
 
 DispatcherQueue::DispatcherQueue(int n_thread)
 {

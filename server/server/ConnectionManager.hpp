@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <unordered_set>
+#include <boost/asio.hpp>
 
 #include "Connection.hpp"
 
@@ -17,8 +18,9 @@ public:
 		return instance;
 	}
 
+	Connection_ptr createConnection(boost::asio::io_context& io_context);
+
 	std::unordered_set<Connection_ptr> connections;
 };
 
 #endif
-

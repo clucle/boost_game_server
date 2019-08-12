@@ -5,6 +5,8 @@
 #include <boost/asio.hpp>
 #include <boost/noncopyable.hpp>
 
+#include "ConnectionManager.hpp"
+
 using boost::asio::ip::tcp;
 
 class ServerSocket : boost::noncopyable
@@ -19,7 +21,7 @@ private:
 	boost::asio::io_context& io_context;
 	uint16_t serverPort = 0;
 	tcp::endpoint endpoint;
-	tcp::acceptor acceptor;
+	std::unique_ptr<boost::asio::ip::tcp::acceptor> acceptor;
 };
 
 #endif
