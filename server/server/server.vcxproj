@@ -129,13 +129,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Connection.cpp" />
+    <ClCompile Include="ConnectionManager.cpp" />
     <ClCompile Include="DispatcherQueue.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ServerSocket.cpp" />
     <ClCompile Include="Task.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chat_message.hpp" />
-    <ClInclude Include="DispatcherQueue.h" />
+    <ClInclude Include="Connection.hpp" />
+    <ClInclude Include="ConnectionManager.hpp" />
+    <ClInclude Include="DispatcherQueue.hpp" />
+    <ClInclude Include="ServerSocket.hpp" />
     <ClInclude Include="Task.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

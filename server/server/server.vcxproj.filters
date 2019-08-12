@@ -24,6 +24,15 @@
     <ClCompile Include="DispatcherQueue.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ConnectionManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Connection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSocket.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chat_message.hpp">
@@ -32,7 +41,16 @@
     <ClInclude Include="Task.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DispatcherQueue.h">
+    <ClInclude Include="DispatcherQueue.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionManager.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Connection.hpp">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerSocket.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
