@@ -16,10 +16,17 @@ void ServerSocket::do_accept()
 
 	auto connection = ConnectionManager::getInstance().createConnection(io_context);
 	acceptor->async_accept(connection->getSocket(),
-		[this](boost::system::error_code error) {
+		[this, connection](boost::system::error_code error) {
 			if (!error) {
-				std::cout << "accept client" << std::endl;
+				this->on_accept(connection, error);
 			}
 			do_accept();
 		});
+}
+
+void ServerSocket::on_accept(Connection_ptr connection, const boost::system::error_code& error)
+{
+	if (!error) {
+		connection->do_read_header();
+	}
 }
