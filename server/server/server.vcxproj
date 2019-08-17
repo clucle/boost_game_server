@@ -130,7 +130,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Connection.cpp" />
-    <ClCompile Include="ConnectionManager.cpp" />
     <ClCompile Include="DispatcherQueue.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ServerSocket.cpp" />
@@ -139,7 +138,6 @@
   <ItemGroup>
     <ClInclude Include="chat_message.hpp" />
     <ClInclude Include="Connection.hpp" />
-    <ClInclude Include="ConnectionManager.hpp" />
     <ClInclude Include="DispatcherQueue.hpp" />
     <ClInclude Include="ServerSocket.hpp" />
     <ClInclude Include="Task.hpp" />
