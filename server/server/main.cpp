@@ -7,10 +7,12 @@
 #include <utility>
 #include <boost/asio.hpp>
 #include "chat_message.hpp"
-#include "DispatcherQueue.h"
+#include "DispatcherQueue.hpp"
 #include "ServerSocket.hpp"
 
 using boost::asio::ip::tcp;
+
+DispatcherQueue g_dispatcherQueue;
 
 int main(int argc, char* argv[])
 {

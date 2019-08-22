@@ -11,6 +11,7 @@
 class DispatcherQueue : boost::noncopyable
 {
 public:
+	DispatcherQueue();
 	DispatcherQueue(int n_thread);
 	~DispatcherQueue();
 	void addTask(Task* task);

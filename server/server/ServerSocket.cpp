@@ -18,6 +18,7 @@ void ServerSocket::do_accept()
 	acceptor->async_accept(connection->getSocket(),
 		[this, connection](boost::system::error_code error) {
 			if (!error) {
+				connection->set_state(Connection::ConnectionState_t::OPEN);
 				this->on_accept(connection, error);
 			}
 			do_accept();

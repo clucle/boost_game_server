@@ -27,7 +27,7 @@ void Connection::do_read_body()
 		{
 			if (!ec)
 			{
-				ConnectionManager::getInstance().sendAll(read_msg);
+				g_dispatcherQueue.addTask(create_task(boost::bind(&ConnectionManager::sendAll, &ConnectionManager::getInstance(), read_msg)));
 				do_read_header();
 			}
 			else
@@ -39,6 +39,7 @@ void Connection::do_read_body()
 
 void Connection::send(const chat_message& msg)
 {
+	if (connection_state == CLOSED) return;
 	bool write_in_progress = !write_msgs.empty();
 	write_msgs.push_back(msg);
 	if (!write_in_progress)
@@ -68,6 +69,11 @@ void Connection::do_write()
 				// out
 			}
 		});
+}
+
+void Connection::set_state(ConnectionState_t state)
+{
+	connection_state = state;
 }
 
 Connection_ptr ConnectionManager::createConnection(boost::asio::io_context& io_context)
