@@ -86,5 +86,5 @@ Connection_ptr ConnectionManager::createConnection(boost::asio::io_context& io_c
 void ConnectionManager::sendAll(const chat_message& msg)
 {
 	for (auto connection : connections)
-		connection->send(msg);
+		g_dispatcherQueue.addTask(create_task(boost::bind(&Connection::send, connection, msg)));
 }
