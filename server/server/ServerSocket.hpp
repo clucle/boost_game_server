@@ -6,7 +6,7 @@
 #include <boost/noncopyable.hpp>
 #include <boost/bind.hpp>
 
-#include "Connection.hpp"
+#include "connection.hpp"
 
 using boost::asio::ip::tcp;
 

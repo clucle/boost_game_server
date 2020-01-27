@@ -6,9 +6,9 @@
 #include <set>
 #include <utility>
 #include <boost/asio.hpp>
-#include "chat_message.hpp"
-#include "DispatcherQueue.hpp"
-#include "ServerSocket.hpp"
+#include "chatmessage.hpp"
+#include "dispatcherqueue.hpp"
+#include "serversocket.hpp"
 
 using boost::asio::ip::tcp;
 

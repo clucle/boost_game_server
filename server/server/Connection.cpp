@@ -1,10 +1,10 @@
-#include "Connection.hpp"
+#include "connection.hpp"
 
 void Connection::do_read_header()
 {
 	auto self(shared_from_this());
 	boost::asio::async_read(socket,
-		boost::asio::buffer(read_msg.data(), chat_message::header_length),
+		boost::asio::buffer(read_msg.data(), ChatMessage::header_length),
 		[this, self](boost::system::error_code ec, std::size_t /*length*/)
 		{
 			if (!ec && read_msg.decode_header())
@@ -37,7 +37,7 @@ void Connection::do_read_body()
 		});
 }
 
-void Connection::send(const chat_message& msg)
+void Connection::send(const ChatMessage& msg)
 {
 	if (connection_state == CLOSED) return;
 	bool write_in_progress = !write_msgs.empty();
@@ -83,7 +83,7 @@ Connection_ptr ConnectionManager::createConnection(boost::asio::io_context& io_c
 	return connection;
 }
 
-void ConnectionManager::sendAll(const chat_message& msg)
+void ConnectionManager::sendAll(const ChatMessage& msg)
 {
 	for (auto connection : connections)
 		g_dispatcherQueue.addTask(create_task(boost::bind(&Connection::send, connection, msg)));

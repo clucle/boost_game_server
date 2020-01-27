@@ -18,33 +18,33 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Task.cpp">
+    <ClCompile Include="connection.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="DispatcherQueue.cpp">
+    <ClCompile Include="dispatcherqueue.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Connection.cpp">
+    <ClCompile Include="serversocket.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ServerSocket.cpp">
+    <ClCompile Include="task.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="chat_message.hpp">
+    <ClInclude Include="connection.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Task.hpp">
+    <ClInclude Include="dispatcherqueue.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DispatcherQueue.hpp">
+    <ClInclude Include="serversocket.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Connection.hpp">
+    <ClInclude Include="task.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ServerSocket.hpp">
+    <ClInclude Include="chatmessage.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

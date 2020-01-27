@@ -1,6 +1,5 @@
 
-#include "DispatcherQueue.hpp"
-#include "DispatcherQueue.hpp"
+#include "dispatcherqueue.hpp"
 
 DispatcherQueue::DispatcherQueue()
 {

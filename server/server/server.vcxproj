@@ -132,18 +132,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Connection.cpp" />
-    <ClCompile Include="DispatcherQueue.cpp" />
+    <ClCompile Include="connection.cpp" />
+    <ClCompile Include="dispatcherqueue.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ServerSocket.cpp" />
-    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="serversocket.cpp" />
+    <ClCompile Include="task.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="chat_message.hpp" />
-    <ClInclude Include="Connection.hpp" />
-    <ClInclude Include="DispatcherQueue.hpp" />
-    <ClInclude Include="ServerSocket.hpp" />
-    <ClInclude Include="Task.hpp" />
+    <ClInclude Include="chatmessage.hpp" />
+    <ClInclude Include="connection.hpp" />
+    <ClInclude Include="dispatcherqueue.hpp" />
+    <ClInclude Include="serversocket.hpp" />
+    <ClInclude Include="task.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

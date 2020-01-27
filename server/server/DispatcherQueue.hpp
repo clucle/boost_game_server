@@ -6,7 +6,7 @@
 #include <boost/thread.hpp>
 #include <boost/noncopyable.hpp>
 
-#include "Task.hpp"
+#include "task.hpp"
 
 class DispatcherQueue : boost::noncopyable
 {

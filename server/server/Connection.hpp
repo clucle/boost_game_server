@@ -6,9 +6,9 @@
 #include <boost/asio.hpp>
 #include <unordered_set>
 #include <deque>
-#include "chat_message.hpp"
-#include "DispatcherQueue.hpp"
-#include "Connection.hpp"
+#include "chatmessage.hpp"
+#include "dispatcherqueue.hpp"
+#include "connection.hpp"
 
 
 extern DispatcherQueue g_dispatcherQueue;
@@ -26,7 +26,7 @@ public:
 
 	Connection_ptr createConnection(boost::asio::io_context& io_context);
 
-	void sendAll(const chat_message& msg);
+	void sendAll(const ChatMessage& msg);
 
 	std::unordered_set<Connection_ptr> connections;
 };
@@ -48,14 +48,14 @@ public:
 	tcp::socket& getSocket() { return socket; }
 	void do_read_header();
 	void do_read_body();
-	void send(const chat_message& msg);
+	void send(const ChatMessage& msg);
 	void do_write();
 	void set_state(ConnectionState_t state);
 
 private:
 	tcp::socket socket;
-	chat_message read_msg;
-	std::deque<chat_message> write_msgs;
+	ChatMessage read_msg;
+	std::deque<ChatMessage> write_msgs;
 	ConnectionState_t connection_state;
 };
 
